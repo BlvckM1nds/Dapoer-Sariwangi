@@ -1,0 +1,126 @@
+# Node.js / React
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Build directories
+build/
+dist/
+
+# Cache directories
+.cache/
+.tmp/
+.parcel-cache/
+
+# Next.js
+.next/
+
+# Static files
+public/static/
+
+# Miscellaneous
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# TypeScript
+*.tsbuildinfo
+
+# Storybook
+storybook-static/
+
+# Test coverage
+coverage/
+
+# Go
+
+# Compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+
+# Output of the go coverage tool
+*.out
+
+# Test binary
+*.test
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Dependency directories
+vendor/
+
+# Go modules
+go.sum
+
+# Generated files
+*.gen.go
+
+# Configuration files
+config.json
+.env
+
+# Database files
+*.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Binary output directories
+bin/
+build/
+
+# Coverage reports
+coverage.out
+
+# Global
+
+# Sentry configuration
+.sentryclirc
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# IDE and editor specific
+.idea/
+.vscode/
+*.iml
+
+# Miscellaneous
+*.swp
+*~
+.project
+.settings/
+.metadata/
+*.bak
+*.tmp
+*.backup
+*.swp
+
+# MacOS files
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
