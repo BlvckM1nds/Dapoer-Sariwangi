@@ -33,7 +33,7 @@ const FavMenuSlider = () => {
               <img src={sampleImage} alt="Menu DSW" className="w-full transition-all duration-300 group-hover:scale-105" />
             </div>
             <div className="substance space-y-3 p-5">
-              <h3 className="text-xl font-bold text-primary">Gurame Bakar</h3>
+              <h3 className="font-rabona tracking-wide text-2xl font-bold text-primary">Gurame Bakar</h3>
               <p className="text-sm text-primary/60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, excepturi. Aperiam nam fugiat doloremque at?</p>
               <p className="text-2xl text-accent font-bold">
                 {new Intl.NumberFormat("id-ID", {

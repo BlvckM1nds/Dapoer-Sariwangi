@@ -54,7 +54,7 @@ const Footer = () => {
               />
             </figure>
             <div className="space-y-2">
-              <h3 className="text-lg font-semibold text-primary">PT Dapoer Sariwangi</h3>
+              <h3 className="font-medium text-lg text-primary">PT Dapoer Sariwangi</h3>
               <div className="socials flex gap-2">
                 {socialMedia.map((social: SocialMedia) => (
                   <a key={social.id} href={social.path} target="_blank" rel="noopener noreferrer" className={`w-8 aspect-square rounded-full border border-accent text-accent flex justify-center items-center duration-200 hover:bg-accent hover:text-white text-lg`}>{social.icon}</a>
@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
           </aside>
           <nav aria-label="footer-content" className="space-y-2">
-            <p className="text-lg text-primary font-semibold">Navigations</p>
+            <h3 className="font-medium text-lg text-primary">Navigations</h3>
             <ul className="text-primary/75 text-sm space-y-2">
               {links.map(({ id, path }: Hyperlink) => (
                 <li key={id} className="capitalize hover:underline">
@@ -73,7 +73,7 @@ const Footer = () => {
             </ul>
           </nav>
           <nav aria-label="footer-content" className="space-y-2">
-            <p className="text-lg text-primary font-semibold">Lorem Ipsum</p>
+            <h3 className="font-medium text-lg text-primary">Lorem Ipsum</h3>
             <ul className="text-primary/75 text-sm space-y-2">
               <li>Lorem ipsum</li>
               <li>Lorem ipsum</li>
@@ -82,7 +82,7 @@ const Footer = () => {
             </ul>
           </nav>
           <div aria-label="footer-content" className="space-y-2">
-            <p className="text-lg text-primary font-semibold">Kunjungi Kami</p>
+            <h3 className="font-medium text-lg text-primary">Kunjungi Kami</h3>
             <ul className="text-primary/75 text-sm space-y-2">
               <li className="flex items-center gap-1.5"><FaClock />Senin - Minggu (10.00 - 22.00)</li>
               <li className="flex items-center gap-1.5"><FaWhatsapp />0878 8326 2600</li>

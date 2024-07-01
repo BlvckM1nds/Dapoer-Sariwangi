@@ -6,7 +6,7 @@ import bgHero from "../../../assets/vegetables.jpg";
 
 const Hero = () => {
   return (
-    <Wrapper id="hero" className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center" style={{ backgroundImage: `url(${bgHero})` }}>
+    <Wrapper id="hero" className="min-h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-center" style={{ backgroundImage: `url(${bgHero})` }}>
       <div className="flex flex-col gap-2 items-center text-white">
         <h1 className="font-greatVibes text-4xl sm:text-6xl md:text-7xl xl:text-8xl">Selera Keluarga Anda</h1>
         <h4 className="text-base sm:text-lg md:text-xl xl:text-2xl mb-2 md:mb-4">telah hadir sejak 2002</h4>

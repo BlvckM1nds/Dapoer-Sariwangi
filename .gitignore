@@ -124,3 +124,5 @@ docker-compose.yml
 ._*
 .Spotlight-V100
 .Trashes
+
+/proposal/

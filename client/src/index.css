@@ -10,35 +10,26 @@
 }
 
 @font-face {
-  font-family: 'Prata';
-  src: url('../public/fonts/Prata-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Rabona';
   src: url('../public/fonts/Rabona-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-@layer base {
-  p {
-    @apply font-medium
-  }
+@font-face {
+  font-family: 'DM-Sans';
+  src: url('../public/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Quicksand', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'DM-Sans', 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

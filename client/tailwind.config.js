@@ -27,8 +27,8 @@ module.exports = {
       },
       fontFamily: {
         greatVibes: "Great-Vibes",
-        prata: "Prata",
         rabona: "Rabona",
+        dmsans: "DM-Sans"
       }
     },
   },

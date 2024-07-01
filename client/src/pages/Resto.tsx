@@ -1,6 +1,10 @@
+import Hero from "../components/User/Resto/Hero";
+
 const Resto = () => {
   return (
-    <div></div>
+    <main>
+      <Hero />
+    </main>
   );
 };
 
