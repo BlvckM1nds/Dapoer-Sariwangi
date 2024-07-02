@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import sampleProfile from "../../../assets/ryu-alvano.jpg";
-import SliderButtons from "./SliderButtons";
+import SliderButtons from "../../Common/SliderButtons";
 import { FaStar } from "react-icons/fa6";
 
 const TestimonialSlider = () => {

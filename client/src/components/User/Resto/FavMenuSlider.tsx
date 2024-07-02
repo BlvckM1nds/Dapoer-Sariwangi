@@ -4,7 +4,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import SliderButtons from "./SliderButtons";
+import SliderButtons from "../../Common/SliderButtons";
 import sampleImage from "../../../assets/gurame-bakar.png";
 
 const FavMenuSlider = () => {

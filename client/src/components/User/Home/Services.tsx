@@ -47,9 +47,9 @@ const Services = () => {
         <div className="text-center">
           <h3 className="font-rabona font-bold tracking-wide text-3xl text-primary leading-none mb-4">Reservasi?</h3>
           <p className="mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, iusto.</p>
-          <Link to="/" className="block">
-            <Button>Reservasi Tempat</Button>
-          </Link>
+          <Button>
+            <Link to="/">Reservasi Tempat</Link>
+          </Button>
         </div>
       </Container>
     </Wrapper>
