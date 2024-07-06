@@ -20,7 +20,7 @@ const links: Hyperlink[] = [
 
 const Header = () => {
   const currentPath = useLocation().pathname;
-  
+
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -37,7 +37,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`py-3 fixed top-0 w-full group transition-all duration-300 ${scrolled ? "bg-white shadow-lg" : "lg:py-6 bg-transparent"} hover:lg:bg-white z-[999]`}>
+    <header className={`py-3 fixed top-0 w-full group transition-all duration-300 ${scrolled ? "bg-white shadow-lg" : "lg:py-6 bg-transparent"} hover:lg:bg-white z-[995]`}>
       <nav className="container mx-auto flex items-center justify-between">
         <Link to="/" className="block h-10 lg:h-12">
           <img

@@ -9,7 +9,7 @@ const ReservationForm = () => {
   };
 
   return (
-    <div id="reservation-form" className="max-w-screen mx-4 py-6 px-4 bg-white shadow-xl -mt-24 space-y-4 md:-mt-28 md:space-y-6 md:w-fit md:mx-auto md:p-10">
+    <div id="reservation-form" className="max-w-screen mx-4 py-6 px-4 bg-white shadow-xl -mt-24 space-y-4 md:-mt-28 md:space-y-6 md:w-fit md:mx-auto md:p-8">
       <h2 className="text-center text-lg md:text-2xl leading-tight md:leading-normal text-accent">
         Ingin makan di tempat? <br className="md:hidden" /><strong>Reservasi tempat sekarang!</strong>
       </h2>

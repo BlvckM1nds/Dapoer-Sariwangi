@@ -1,7 +1,8 @@
 import Hero from "../components/User/Resto/Hero";
 import Favorite from "../components/User/Resto/Favorite";
 import Categories from "../components/User/Resto/Categories";
-import Promo from "../components/User/Resto/Promo";
+import Promotions from "../components/User/Resto/Promotions";
+import Rooms from "../components/User/Resto/Rooms";
 
 const Resto = () => {
   return (
@@ -9,7 +10,8 @@ const Resto = () => {
       <Hero />
       <Favorite />
       <Categories />
-      <Promo />
+      <Promotions />
+      {/* <Rooms /> */}
     </main>
   );
 };
