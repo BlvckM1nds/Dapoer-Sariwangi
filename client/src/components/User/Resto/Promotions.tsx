@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { BsClock } from "react-icons/bs";
+import sampleBg from "../../../assets/cooks-bw.jpg";
 
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/effect-fade";
 
 import { formatLongDate } from "../../../utils/formatDateTime";
 
@@ -54,16 +56,16 @@ const Promotions = () => {
   };
 
   return (
-    <Wrapper id="promotions" className="bg-light py-16 lg:py-24">
-      <h2 className="mb-8 md:mb-12 font-rabona font-bold text-accent text-center text-3xl lg:text-4xl">Promo Kami</h2>
-      <div className="max-w-4xl mx-auto flex flex-col md:bg-white md:rounded-lg md:overflow-hidden md:shadow-lg md:flex-row md:items-center group">
+    <Wrapper id="promotions" className="bg-cover bg-center py-16 lg:py-24" style={{ backgroundImage: `url(${sampleBg})` }}>
+      <h2 className="mb-8 md:mb-12 font-rabona font-bold text-white text-center text-3xl lg:text-4xl">Promo Kami</h2>
+      <div className="max-w-4xl mx-auto flex flex-col md:bg-white md:rounded-lg md:overflow-hidden md:flex-row md:items-center group">
         {/* Information */}
         <div className="p-5 text-center order-2 space-y-4 md:order-1 md:text-left md:basis-1/2 md:max-w-1/2 md:p-10 md:space-y-4">
-          <h2 className="text-accent text-xl md:text-2xl font-bold">{promo?.title}</h2>
-          <p className="text-sm md:text-base text-primary/60 line-clamp-3">{promo?.description}</p>
+          <h2 className="text-white md:text-accent text-xl md:text-2xl font-bold">{promo?.title}</h2>
+          <p className="text-sm md:text-base text-white/60 md:text-primary/60 line-clamp-3">{promo?.description}</p>
           <div>
-            <h4 className="text-base md:text-lg font-semibold">Periode Promo:</h4>
-            <p className="inline-flex items-center text-sm md:text-base text-primary/60">
+            <h4 className="text-base md:text-lg text-white md:text-primary font-semibold">Periode Promo:</h4>
+            <p className="inline-flex items-center text-sm md:text-base text-white/60 md:text-primary/60">
               <BsClock className="hidden md:inline text-lg mr-1.5" />
               {formatLongDate(promo?.startDate)} &#x2212; {formatLongDate(promo?.endDate)}
             </p>
@@ -76,11 +78,12 @@ const Promotions = () => {
           spaceBetween={32}
           slidesPerView={1}
           loop
+          effect="fade"
           autoplay={{
             delay: 3000,
             disableOnInteraction: false
           }}
-          modules={[Autoplay]}
+          modules={[Autoplay, EffectFade]}
           onSlideChange={handleSlideChange}
           className="w-screen order-1 md:order-2 md:basis-1/2 md:max-w-1/2"
         >
