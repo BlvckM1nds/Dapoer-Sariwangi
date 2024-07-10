@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Categories = () => {
   return (
-    <Wrapper id="resto-categories" className="bg-cream py-16 lg:py-24">
+    <Wrapper id="resto-categories" className="py-16 lg:py-24">
       <Container className="space-y-10 lg:space-y-14">
         <h2 className="font-rabona font-bold tracking-wide text-3xl lg:text-4xl text-accent text-center">Kategori Menu</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

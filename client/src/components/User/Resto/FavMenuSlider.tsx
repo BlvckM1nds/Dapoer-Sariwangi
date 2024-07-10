@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 
 import SliderButtons from "../../Common/SliderButtons";
 import sampleImage from "../../../assets/gurame-bakar.png";
+import { currencyIDR } from "../../../utils/currencyIDR";
 
 const FavMenuSlider = () => {
   return (
@@ -27,22 +28,16 @@ const FavMenuSlider = () => {
       modules={[Pagination]}
     >
       {[1, 2, 3, 4].map((value: number) => (
-        <SwiperSlide key={value}>
-          <div className="text-center bg-white rounded-lg overflow-hidden duration-300 group">
-            <div className="w-full aspect-square overflow-hidden">
-              <img src={sampleImage} alt="Menu DSW" className="w-full transition-all duration-300 group-hover:scale-105" />
-            </div>
-            <div className="substance space-y-3 p-5">
-              <h3 className="font-rabona tracking-wide text-2xl font-bold text-primary">Gurame Bakar</h3>
-              <p className="text-sm text-primary/60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, excepturi. Aperiam nam fugiat doloremque at?</p>
-              <p className="text-2xl text-accent font-bold">
-                {new Intl.NumberFormat("id-ID", {
-                  style: "currency",
-                  currency: "IDR",
-                  maximumFractionDigits: 0
-                }).format(150000)}
-              </p>
-            </div>
+        <SwiperSlide key={value} className="text-center bg-white rounded-lg overflow-hidden duration-300 group">
+          <div className="w-full aspect-square overflow-hidden">
+            <img src={sampleImage} alt="Menu DSW" className="w-full transition-all duration-300 group-hover:scale-105" />
+          </div>
+          <div className="substance space-y-3 p-5">
+            <h3 className="font-rabona tracking-wide text-2xl font-bold text-primary">Gurame Bakar</h3>
+            <p className="text-sm text-primary/60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, excepturi. Aperiam nam fugiat doloremque at?</p>
+            <p className="text-2xl text-accent font-bold">
+              {currencyIDR(150000)}
+            </p>
           </div>
         </SwiperSlide>
       ))}

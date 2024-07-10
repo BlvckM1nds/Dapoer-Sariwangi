@@ -13,7 +13,7 @@ import Wrapper from "../../Common/Wrapper";
 import SliderButtons from "../../Common/SliderButtons";
 import Button from "../../Common/Button";
 
-interface Promos {
+interface Promo {
   title: string
   description: string
   visual: string
@@ -21,7 +21,7 @@ interface Promos {
   endDate: Date
 };
 
-const promoData: Promos[] = [
+const promoData: Promo[] = [
   {
     title: "Makan Hemat di Hari Senin",
     description: "Nikmati diskon spesial 20% setiap Senin di semua menu! Ajak keluarga dan teman-teman untuk menikmati hidangan favorit Anda dengan harga lebih terjangkau. Jangan lewatkan kesempatan ini untuk memulai minggu dengan kenikmatan kuliner yang luar biasa.",
@@ -46,13 +46,13 @@ const promoData: Promos[] = [
 ];
 
 const Promotions = () => {
-  const [promos] = useState<Promos[]>(promoData);
-  const [promo, setPromo] = useState<Promos>(promos[0]);
+  const [promos] = useState<Promo[]>(promoData);
+  const [activePromo, setActivePromo] = useState<Promo>(promos[0]);
 
   const handleSlideChange = (swiper: SwiperClass) => {
     const currentIndex = swiper.realIndex;
 
-    setPromo(promos[currentIndex]);
+    setActivePromo(promos[currentIndex]);
   };
 
   return (
@@ -61,13 +61,13 @@ const Promotions = () => {
       <div className="max-w-4xl mx-auto flex flex-col md:bg-white md:rounded-lg md:overflow-hidden md:flex-row md:items-center group">
         {/* Information */}
         <div className="p-5 text-center order-2 space-y-4 md:order-1 md:text-left md:basis-1/2 md:max-w-1/2 md:p-10 md:space-y-4">
-          <h2 className="text-white md:text-accent text-xl md:text-2xl font-bold">{promo?.title}</h2>
-          <p className="text-sm md:text-base text-white/60 md:text-primary/60 line-clamp-3">{promo?.description}</p>
+          <h2 className="text-white md:text-accent text-xl md:text-2xl font-bold">{activePromo?.title}</h2>
+          <p className="text-sm md:text-base text-white/60 md:text-primary/60 line-clamp-3">{activePromo?.description}</p>
           <div>
             <h4 className="text-base md:text-lg text-white md:text-primary font-semibold">Periode Promo:</h4>
             <p className="inline-flex items-center text-sm md:text-base text-white/60 md:text-primary/60">
               <BsClock className="hidden md:inline text-lg mr-1.5" />
-              {formatLongDate(promo?.startDate)} &#x2212; {formatLongDate(promo?.endDate)}
+              {formatLongDate(activePromo?.startDate)} &#x2212; {formatLongDate(activePromo?.endDate)}
             </p>
           </div>
           <Button>Lihat Detail</Button>
@@ -75,10 +75,10 @@ const Promotions = () => {
 
         {/* Slider */}
         <Swiper
+          effect="fade"
           spaceBetween={32}
           slidesPerView={1}
           loop
-          effect="fade"
           autoplay={{
             delay: 3000,
             disableOnInteraction: false
@@ -87,9 +87,13 @@ const Promotions = () => {
           onSlideChange={handleSlideChange}
           className="w-screen order-1 md:order-2 md:basis-1/2 md:max-w-1/2"
         >
-          {promos?.map((promo: Promos, index: number) => (
+          {promos?.map((promo: Promo, index: number) => (
             <SwiperSlide key={index} className="px-8 md:p-0">
-              <img src={promo.visual} alt="Visual" className="w-full transition-all duration-300 group-hover:scale-105" />
+              <img
+                src={promo.visual}
+                alt="Visual"
+                className="w-full transition-all duration-300 group-hover:md:scale-105"
+              />
             </SwiperSlide>
           ))}
           <SliderButtons

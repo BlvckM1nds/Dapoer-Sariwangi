@@ -5,7 +5,7 @@ import { FaBowlFood } from "react-icons/fa6";
 import Wrapper from "../../Common/Wrapper";
 import Container from "../../Common/Container";
 import Button from "../../Common/Button";
-import bgFavorite from "../../../assets/soup.jpg";
+import bgFavorite from "../../../assets/cooks-bw.jpg";
 
 interface Service {
   id: string
